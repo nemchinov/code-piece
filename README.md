@@ -3,7 +3,7 @@
 
 * [JavaScript](/javascript/javascript.md)
 * [JavaScript Examples](/javascript/javascript_code.md)
-* [Style](/style/css.md)
+* [Style](/style_sheet/css.md)
 * [Analytics](/analytics/terminology.md)
 * Other
     * [Git](/other/git.md)
