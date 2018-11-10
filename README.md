@@ -1,10 +1,13 @@
 # code-piece
 Кусочки кода и правила написания, которые неплохо было бы запомнить
 
-* [JavaScript](/javascript/javascript.md)
-* [JavaScript Examples](/javascript/javascript_code.md)
+* JavaScript
+    * [JavaScript](/javascript/javascript.md)
+    * [Examples](/javascript/javascript_code.md)
+    * [Сheck yourself](/javascript/check.md)
 * [Style](/style_sheet/css.md)
 * [Analytics](/analytics/terminology.md)
+* [NodeJS](/node_js/node_js_code.md)
 * Other
     * [Git](/other/git.md)
     * [Docker](/other/docker.md)
