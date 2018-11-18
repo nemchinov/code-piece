@@ -9,7 +9,9 @@
 * [Style](/style_sheet/css.md)
 * [Analytics](/analytics/terminology.md)
 * [NodeJS](/node_js/node_js_code.md)
+    * [NPM](/node_js/npm.md)
 * Other
     * [Git](/other/git.md)
     * [Docker](/other/docker.md)
     * [Links](/other/links.md)
+    * [Linux](/other/linux.md)

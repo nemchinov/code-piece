@@ -63,3 +63,8 @@
     justify-self: center;
     align-self: right;
     ```
+3. Resize
+    ```css
+    resize: horizontal;
+    overflow: auto;
+    ```
