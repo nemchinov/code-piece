@@ -168,3 +168,25 @@
         return clonedObj;
     };
     ```
+7. String to array
+    ```javascript
+    const name = "Test text";
+    const map = Array.prototype.map;
+
+    const newName = map.call(name, eachLetter => {
+        return `${eachLetter}`
+    });
+    ```
+8. Create array length n
+    ```javascript
+    Array.apply(null, {length: N}).map(Number.call, Number);
+    Array.apply(null, {length: N}).map((_, i) => i);
+    Array.from(Array(10).keys());
+    [...Array(10).keys()];
+    Array.from({length: N}, (v, k) => k+1);
+    Array(N).fill().map((e,i)=>i);
+    ```
+9. Замена небезопасных символов
+    ```javascript
+    str = str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    ```

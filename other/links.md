@@ -10,3 +10,4 @@
     - [https://github.com/larsonjj/generator-yeogurt]()
     - [https://github.com/facebook/create-react-app]()
     - [https://github.com/vuejs/vue-cli]()
+9. [Icons](https://thenounproject.com/)

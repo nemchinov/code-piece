@@ -17,3 +17,4 @@
     * [Docker](/other/docker.md)
     * [Links](/other/links.md)
     * [Linux](/other/linux.md)
+    * [Dev tools](/other/dev_tools.md)
