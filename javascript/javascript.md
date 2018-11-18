@@ -94,5 +94,40 @@
     console.trace();
     console.time('slowFunction'); // console.timeEnd('slowFunction');
     console.group('Group'); // console.log(1); console.groupEnd();
-    
+    $_ - результат предыдущего выполнения в консоли
+    $0 - $4 - список последних выделенных элементов
+    setTimeout(function(){debugger; }, 3000) - к примеру можно навести на элемент, который исчезает, когда сработает дебагер - можно будет изучить его детально не боясь что он исчезнет
+    ```
+10. Promises
+    ```javascript
+    const promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(); // Change status to 'fulfilled'
+        }, 2000);
+    })
+    promise.then(onSuccess)
+        .catch(onError)
+        .finally(onFinally);
+    Promise.all(iterable);
+    Promise.race(iterable);//выполнено или отклонено с результатом исполнения первого выполненного или отклонённого итерируемого обещания
+    Promise.reject(reason);
+    Promise.resolve(value);
+    ```
+11. Async Await
+    ```javascript
+    async function add1(x) {
+        const a = await resolveAfter2Seconds(20);
+        const b = await resolveAfter2Seconds(30);
+        return x + a + b;
+    }
+
+    add1(10).then(v => {
+        console.log(v);  // prints 60 after 4 seconds.
+    });
+
+    async function add2(x) {
+        const a = resolveAfter2Seconds(20);
+        const b = resolveAfter2Seconds(30);
+        return x + await a + await b;
+    }
     ```

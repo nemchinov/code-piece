@@ -1,1 +1,12 @@
 1. [EsLint rules](https://eslint.org/docs/rules/)
+2. [Materialize css](https://materializecss.com)
+3. [Html template](http://sanusart.github.io)
+4. [Generate css browser prefixes](http://pleeease.io/play/)
+5. [Transparent textures](https://www.transparenttextures.com/)
+6. [Web code tools](https://webcode.tools/)
+7. [Center in css](http://howtocenterincss.com)
+8. BoilerPlate: 
+    - [https://github.com/yeoman/generator-webapp]()
+    - [https://github.com/larsonjj/generator-yeogurt]()
+    - [https://github.com/facebook/create-react-app]()
+    - [https://github.com/vuejs/vue-cli]()
