@@ -1,5 +1,4 @@
-1. Использование `сonst/let`
-2. Использоваение spread оператора для хэшей и массивов
+2. Spread оператора для хэшей и массивов
     ```javascript
     const propName = 'default',
         anotherHash = {
@@ -11,7 +10,6 @@
             ...anotherHash
         };
     ```
-3. Ставить `;`
 4. BigInt 1n, 2n...
 5. Для своих объектов определять функцию `toString`
 6. Использовать оператор строго равенства `===` и явное приведение типов
@@ -131,4 +129,82 @@
         return x + await a + await b;
     }
     ```
-    
+12. Значение по умолчанию
+    ```javascript
+    (a, b = 0.7) => a + b;
+    ```
+13. Map/WeakMap(каждый ключ объект), Set/WeakSet
+    ```javascript
+    let myMap = new Map();
+    let keyFunc = function() {};
+    myMap.set(keyFunc, "значение, связанное с keyFunc");
+    myMap.get(keyFunc);
+    let mySet = new Set([1, 1, 2, 2, 3, 3]); //1,2,3
+    ```
+14. Classes
+    ```javascript
+    class Task extends Parent {
+        constructor() { super(); }
+
+        showId() { }
+
+        static loadAll() { }
+    }
+    ```
+15. Итераторы
+    ```javascript
+    let arr = [11,12,13];
+    let itr = arr[Symbol.iterator]();
+    itr.next(); // { value: 11, done: false }
+    ```
+16. Генераторы
+    ```javascript
+    function *infiniteNumbers() {
+        var n = 1;
+        while (true) {
+            yield n++;
+        }
+    }
+
+    var numbers = infiniteNumbers(); // возвращает перебираемый объект
+
+    numbers.next(); // { value: 1, done: false }
+    numbers.next(); // { value: 2, done: false }
+    numbers.next(); // { value: 3, done: false }
+    ```
+
+# Patterns
+1. Паттерн Ice Factory
+    ```javascript
+    export default function makeShoppingCart({db}) {
+        return Object.freeze({
+            addProduct,
+            empty,
+            getProducts,
+            removeProduct,
+            // другие
+        })
+        function addProduct (product) {
+            db.push(product)
+        }
+        
+        function empty () {
+            db = []
+        }
+        function getProducts () {
+            return Object
+            .freeze(db)
+        }
+        function removeProduct (id) {
+            // удалить товар
+        }
+        // другие функции
+    }
+    // someOtherModule.js
+    const db = []
+    const cart = makeShoppingCart({ db })
+    cart.addProduct({ 
+        name: 'foo', 
+        price: 9.99
+    })
+    ```

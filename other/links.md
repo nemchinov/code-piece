@@ -11,3 +11,5 @@
     - [https://github.com/facebook/create-react-app]()
     - [https://github.com/vuejs/vue-cli]()
 9. [Icons](https://thenounproject.com/)
+10. [Favicon & App Icon Generator](https://www.favicon-generator.org/)
+11. [Manifest Generator](https://tomitm.github.io/appmanifest/)

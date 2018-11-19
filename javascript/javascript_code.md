@@ -190,3 +190,26 @@
     ```javascript
     str = str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
     ```
+10. Обязательные параметры функции
+    ```javascript
+    const required = () => {throw new Error('Missing parameter')};
+    //При вызове этой функции произойдёт ошибка, если параметры "a" или "b" не заданы
+    const add = (a = required(), b = required()) => a + b;
+    ```
+11. Использование reduce для одновременного выполнения мэппинга и фильтрации массива
+    ```javascript
+    array.reduce((finalList, text) => {
+        if (text) {
+            finalList.push({ title: text });
+        }
+        return finalList;
+    }, []);
+    ```
+12. Убрать лищние свойства из объекта 
+    ```javascript
+    let {_internal, tooBig, ...cleanObject} = {el1: '1', _internal:"secret", tooBig:{}, el2: '2', el3: '3'};
+    ```
+13. Удалить повторяющиеся значения 
+    ```javascript
+    [...new Set(arr)]
+    ```

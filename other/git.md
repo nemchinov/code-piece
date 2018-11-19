@@ -21,3 +21,4 @@
     * `**.txt` - ignores all .txt recursive from the current folder
     * `**/*.txt` - ignores all .txt in subdirectories recursive from the current folder (does not include the current folder)
     * `**/test` - ignores all files and folder with name test in subdirectories
+6. GitHub Pages можно включить в настройках репозитория
