@@ -1,3 +1,5 @@
+# From reading
+1.
 2. Spread оператора для хэшей и массивов
     ```javascript
     const propName = 'default',

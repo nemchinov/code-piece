@@ -115,7 +115,36 @@
             );
         }
         ```
-4. High Order Components
+4. Higher-Order Components - A higher-order component is a function that takes a component and returns a new component.
+    ```javascript
+    function AuthWrapper(WrappedComponent) {
+        return class extends React.Component {
+            render() {
+                if (this.props.isLoggedIn) {
+                    return <WrappedComponent {...this.props} />;
+                }
+                return <p>You're not logged in ☹️</p>;
+            }
+        };
+    }
+    ```
 5. render props
 6. Контекст в React- это способ для дочернего компонента получить доступ к значению в родительском компоненте. При создании React приложения вам часто нужно передавать значения с верха вашего дерева React вниз. Не используя context, вы передаете props через компоненты, которым не обязательно о них знать.
-7. 
+    ```javascript
+    const ContextObject = React.createContext({ foo: "bar" });
+    // пример смотри выше
+    ```
+7. Lazy Loading
+    ```javascript
+    const LazyDocument = React.lazy(() => import("./big_document"));
+    ```
+8. Lifecycle
+    ![Image of Lifecycle](./react_lifecycle.png)
+9. Set state
+    ```javascript
+    this.setState((prevState, props) => {
+        return { counter: prevState.counter + 1 };
+    }, () => {
+        console.log(this.state.counter);// + 1
+    });
+    ```

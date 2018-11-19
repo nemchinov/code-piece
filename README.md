@@ -18,3 +18,6 @@
     * [Links](/other/links.md)
     * [Linux](/other/linux.md)
     * [Dev tools](/other/dev_tools.md)
+    * [Safety](/other/safety.md)
+    * [Dev tools](/other/dev_tools.md)
+    * [To Do](/other/to_do.md)

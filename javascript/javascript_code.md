@@ -213,3 +213,16 @@
     ```javascript
     [...new Set(arr)]
     ```
+14. Мемоизация 
+    ```javascript
+    function memoize(f) {
+        let cache = {};
+        return function ret() {
+            let key = JSON.stringify(arguments);
+            if (!cache.hasOwnProperty(key)) {
+            cache[key] = f.apply(this, arguments);
+            }
+            return cache[key];
+        }
+    }
+    ```
