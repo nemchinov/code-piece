@@ -1,5 +1,16 @@
 # From reading
-1.
+1. Метки (Не советуют использовать, лучшим решением будет улучшение алгоритма)
+    ```javascript
+    top:
+    for (i = 0; i < items.length; i++){
+    for (j = 0; j < tests.length; j++)
+        if (!tests[j].pass(items[i]))
+            continue top;
+
+    labl: {
+        break labl;
+    }
+    ```
 2. Spread оператора для хэшей и массивов
     ```javascript
     const propName = 'default',
@@ -174,6 +185,16 @@
     numbers.next(); // { value: 2, done: false }
     numbers.next(); // { value: 3, done: false }
     ```
+17. Void
+    ```javascript
+    void(0);// undefined
+    void function () {} ();
+    void async function() {}();
+    ```
+18. Запятая - возвращается последний операнд
+19. Array - reduceRight()
+20. window.setTimeout(func, [, delay, param1, param2, ...]);
+21. HTMLElement.dataset - доступ к атрибутам элемента
 
 # Patterns
 1. Паттерн Ice Factory
