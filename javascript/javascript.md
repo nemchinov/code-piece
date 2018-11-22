@@ -192,9 +192,39 @@
     void async function() {}();
     ```
 18. Запятая - возвращается последний операнд
-19. Array - reduceRight()
+19. Array
+    ```javascript
+    [1, 2, 3, 4, 5].copyWithin(0, 3); // [4, 5, 3, 4, 5]
+    Array.reduceRight(); // reduce с конца
+    Array.reverse(); // обратный порядок массива
+    Array.lastIndexOf(); // индекс последнего вхождения
+    Array.from(arrayLike[, mapFn[, thisArg]]); // создание массива из итерируемых объектов
+    arr.entries(); // итератор по парам ключ/значение
+    Array(3).fill(4);// [4, 4, 4], arr.fill(value[, start = 0[, end = this.length]])
+    arr.find(callback[, thisArg]); // возвращает первй элемент подходящий под условие
+    arr.findIndex(callback[, thisArg]); //возвращает индекс первого элемента подходящего под условие
+    arr.includes(searchElement[, fromIndex = 0]); // проверка на вхождение элемента
+    arr.keys(); // итератор по индексам массива
+    arr.values(); // итератор по значениям массива
+    // экспериментальные
+    var newArray = arr.flat(depth); // уменьшение глубины массива, flatMap
+    ```
 20. window.setTimeout(func, [, delay, param1, param2, ...]);
 21. HTMLElement.dataset - доступ к атрибутам элемента
+22. Строки
+    ```javascript
+    String.prototype.charAt();
+    String.prototype.charCodeAt();
+    str.endsWith(searchString[, position]);
+    str.includes(searchString[, position]);
+    str.repeat(count);
+    str.startsWith(searchString[, position]);
+    str.substr(start[, length]);
+    str.substring(indexA[, indexB]);
+    str.trim(); //trimLeft(), trimRight()
+    // experiment
+    'abc'.padEnd(10, "foo");  // "abcfoofoof", padStart
+    ```
 
 # Patterns
 1. Паттерн Ice Factory
