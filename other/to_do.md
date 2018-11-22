@@ -27,7 +27,6 @@
 24. как защитить фронтенд/атаки на js приложение
 25. https://docs.google.com/spreadsheets/d/1Ki54O7meLWwh4yfDYLyp_ctlEcNoi-LDUjHapaBjdOE/edit#gid=0
 26. https://habr.com/company/ruvds/blog/350536/
-    https://reallyshouldblogthis.blogspot.com/2016/02/writing-pure-javascript-repository.html
     https://mongoosejs.com/docs/models.html
     https://maxfarseer.gitbooks.io/react-course-ru-v2/content/
     https://habr.com/post/326272/
@@ -35,6 +34,6 @@
     https://www.searchengines.ru/chrome-dev-tools-seo.html
     https://web.dev/learn
     https://htmlacademy.ru/blog/371-flexbox-use-cases
-    https://medium.com/webbdev/js-a4a9dfed9782
     https://github.com/airbnb/javascript#arrow-functions
 27. tls_sni
+28. SSL сертификаты

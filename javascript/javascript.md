@@ -225,6 +225,28 @@
     // experiment
     'abc'.padEnd(10, "foo");  // "abcfoofoof", padStart
     ```
+23. Object
+    - `Object.freeze`
+24. Контекст выполнения - окружение, в котором производится выполнение кода на JavaScript
+    - Глобальный
+    - Функции
+    - Функции eval  
+
+    Стадии создания:
+    - Определяется значение this и осуществляется привязка this (this binding).
+    - Создаётся компонент LexicalEnvironment (лексическое окружение).
+    - Создаётся компонент VariableEnvironment (окружение переменных).
+
+    В контексте выполнения функции значение this зависит от того, как именно была вызвана функция. Если она вызвана в виде метода объекта, тогда значение this привязано к этому объекту. В других случаях this привязывается к глобальному объекту или устанавливается в undefined (в строгом режиме).
+    
+    Стек выполнения (execution stack), стек вызовов (call stack) - LIFO-стек, который используется для хранения контекстов выполнения, создаваемых в ходе работы кода.
+    
+    Лексическое окружение - состоит из записи окружения (Environment Record) и ссылки на внешнее лексическое окружение, которая может принимать значение null.
+    - Глобальное окружение (Ссылка глобального окружения на внешнее окружение представлена значением null)
+    - Окружение функции
+    
+    Окружение переменных (Variable Environment) - В ES6 существует одно различие между компонентами LexicalEnvironment и VariableEnvironment. Оно заключается в том, что первое используется для хранения объявлений функций и переменных, объявленных с помощью ключевых слов let и const, а второе — только для хранения привязок переменных, объявленных с использованием ключевого слова var.
+25. Hoisting - всплытие.
 
 # Patterns
 1. Паттерн Ice Factory
@@ -260,4 +282,53 @@
         name: 'foo', 
         price: 9.99
     })
+    ```
+2. [Декораторы](https://tproger.ru/translations/decorators-with-factory-functions/)
+    ```javascript
+    function logDuration(fn) {
+        return function decorator(...args) {
+            let start = Date.now();
+            let result = fn.apply(this, args);
+            let duration = Date.now() - start;
+            console.log(fn.name + "() duration : " + duration);
+            return result;
+        }
+    }
+    function createAuthorizeDecorator(currentUser) {
+        return function authorize(fn) {
+            return function decorator(...args) {
+            if (currentUser.isAuthenticated()) {
+                return fn.apply(this, args);
+            } else {
+                throw "Not authorized to execute " + fn.name + "()";
+            }
+            }
+        }
+    }
+    function decorateMethods(obj, ...decorators) {
+        function decorateMethod(fnName) {
+            if (typeof(obj[fnName]) === "function") {
+            obj[fnName] = _.compose(...decorators)(obj[fnName]);
+            }
+        }
+        Object.keys(obj).forEach(decorateMethod);
+        return obj;
+    }
+    function decorateAndFreeze(obj, ...args) {
+        decorateMethods(obj, ...args);
+        return Object.freeze(obj);
+    }
+    function TodoStore() { 
+        function get() { }
+        function add(todo) { }
+        function edit(id, todo) { }
+        function remove(id) { }
+            
+        return decorateAndFreeze({
+            get,
+            add,
+            edit,
+            remove
+        }, logDuration, authorize);  
+    }
     ```
