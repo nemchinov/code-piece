@@ -81,7 +81,7 @@
     GRANT UPDATE ON accounts TO joe;
     REVOKE ALL ON accounts FROM PUBLIC;
     ```
-
+1. Returning `INSERT INTO users Default VALUES RETURNING id;`
 
 # Info
 1. Максимальная длинна имени идентификатора - NAMEDATALEN равно 64 - 1байт
