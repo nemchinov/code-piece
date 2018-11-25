@@ -13,7 +13,7 @@
 * [NodeJS](/node_js/node_js_code.md)
     * [NPM](/node_js/npm.md)
 * [SQL]
-    * [PostgreSQL](/sql/ostgresql.md)
+    * [PostgreSQL](/sql/postgresql.md)
 * Other
     * [Git](/other/git.md)
     * [Docker](/other/docker.md)
