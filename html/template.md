@@ -21,6 +21,9 @@
     <main>
     <p>This is <b>my</b> text.</p>
     </main>
+    <aside role="complementary">
+        <!-- Вторичное содержимое -->
+    </aside>
     <footer role="contentinfo"></footer>
 
     <!-- scripts -->

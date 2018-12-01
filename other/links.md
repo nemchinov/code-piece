@@ -15,3 +15,4 @@
 11. [Manifest Generator](https://tomitm.github.io/appmanifest/)
 12. [Fake Json](https://fakejson.com/)
 13. [Beautifull site examples](https://dribbble.com/)
+1. [Check all brawsers preview](http://browsershots.org/)

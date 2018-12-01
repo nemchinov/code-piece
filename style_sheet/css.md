@@ -62,3 +62,12 @@
     resize: horizontal;
     overflow: auto;
     ```
+4. Flex-box - `display: flex;`
+    - `flex-direction` - row, column
+    - `justify-content` -  положение на оси: flex-start, center, space-between
+    - `flex-wrap`
+    - `align-items` - расположение по поперечной оси
+    -  `align-item` - выравнивани если контент распологается в несколько строк
+    - `order` - для элемента, позволяет изменить порядок
+    - `flex-grow` -  позвляет элементу растягиваться при необходимости
+    - `align-self` - расположение конкретного элемента по поперечной оси

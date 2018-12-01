@@ -247,6 +247,40 @@
     
     Окружение переменных (Variable Environment) - В ES6 существует одно различие между компонентами LexicalEnvironment и VariableEnvironment. Оно заключается в том, что первое используется для хранения объявлений функций и переменных, объявленных с помощью ключевых слов let и const, а второе — только для хранения привязок переменных, объявленных с использованием ключевого слова var.
 25. Hoisting - всплытие.
+26. Web worker
+    ```javascript
+    const myWorker = new Worker('worker.js');
+    myWorker.postMessage('Hello!');
+    myWorker.onmessage = function(e) {
+        console.log(e.data);
+    }
+    // worker
+    self.onmessage = function(e) {
+        console.log(e.data);
+
+        // Send message to main file
+        self.postMessage(workerResult);
+    }
+    ```
+27. Service workers
+    ```javascript
+    navigator.serviceWorker.register('/service-worker.js');
+    /* service-worker.js */
+
+    // Install, activate, fetch (Listen for network requests from the main document)
+    self.addEventListener('fetch', function(event) {
+        event.respondWith(
+            caches.match(event.request);
+        );
+    });
+    ```
+28. Обработка ошибок
+    ```javascript
+    throw new Error('something went wrong'); 
+    const myError = new Error('please improve your code'); // myError.message, myError.stack
+    try { } catch (err) { } finally { }
+    Promise.resolve(1).catch((err) => {});
+    ```
 
 # Patterns
 1. Паттерн Ice Factory

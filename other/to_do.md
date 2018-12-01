@@ -8,7 +8,6 @@
 5. Приложение с использованием react native https://medium.com/react-native-training/bitcoin-ripple-ethereum-price-checker-with-react-native-redux-e9d076037092
 6. Webpack https://codeburst.io/easy-guide-for-webpack-2-0-from-scratch-fe508a3ce44e
 7. WebAssembly https://medium.com/devschacht/daniel-simmons-get-started-with-webassembly-using-only-14-lines-of-javascript-89960df71498
-8. протокол QUIC
 9. HTTP 2
 10. Code splitting
 11. tree shaking
@@ -37,3 +36,4 @@
     https://github.com/airbnb/javascript#arrow-functions
 27. tls_sni
 28. SSL сертификаты
+29. https://postgrespro.ru/docs/postgresql/11/queries-table-expressions
