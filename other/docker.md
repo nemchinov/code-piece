@@ -3,6 +3,7 @@
 # Команды
 1. Список контейнеров `docker ps -a -s --no-trunc`
 1. Список образов `docker images`
+1. Поиск `docker search name`
 1. Загрузить контейнер `docker pull pocket_name`
 1. Следить за логами контейнера `docker logs --follow my_container`
 1. Удаление контейнера `docker rm my_container`
@@ -27,3 +28,4 @@
 `docker exec -it nginx bash`
 
 [Статья](https://habr.com/company/flant/blog/336654/)
+[Статья 2](https://habr.com/post/337306/)
