@@ -37,3 +37,9 @@
 27. tls_sni
 28. SSL сертификаты
 29. https://postgrespro.ru/docs/postgresql/11/queries-table-expressions
+30. aws
+31. angularJs 1.x
+32. gulp
+33. typescript
+34. pug
+36. https://habr.com/company/mailru/blog/350962/
