@@ -138,7 +138,7 @@
     ```javascript
     const LazyDocument = React.lazy(() => import("./big_document"));
     ```
-8. Lifecycle
+8. Lifecycle  
     ![Image of Lifecycle](./react_lifecycle.png)
 9. Set state
     ```javascript

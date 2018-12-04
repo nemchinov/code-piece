@@ -42,4 +42,3 @@
 32. gulp
 33. typescript
 34. pug
-36. https://habr.com/company/mailru/blog/350962/
