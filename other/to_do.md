@@ -24,7 +24,7 @@
 22. http в браузере
 23. ооп в javascript, функционально оп
 24. как защитить фронтенд/атаки на js приложение
-25. htgit config --global user.name "Ваше Имя"tps://docs.google.com/spreadsheets/d/1Ki54O7meLWwh4yfDYLyp_ctlEcNoi-LDUjHagit config --global user.name "Ваше Имя"paBjdOE/edit#gid=0
+25. https://docs.google.com/spreadsheets/d/1Ki54O7meLWwh4yfDYLyp_ctlEcNoi-LDUjHapaBjdOE/edit#gid=0
 26. https://habr.com/company/ruvds/blog/350536/
     https://mongoosejs.com/docs/models.html
     https://maxfarseer.gitbooks.io/react-course-ru-v2/content/
