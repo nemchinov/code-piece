@@ -241,3 +241,13 @@
     console.log([4, 6, 8, 12].find(isPrime)); // undefined, не найдено
     console.log([4, 5, 8, 12].find(isPrime)); // 5
     ```
+1. Функции
+    ```javascript
+    void function () {
+        console.log('Cool IIFE called')
+    }()
+    let result1 = function () {
+        // ... какой-то код
+        return 'Nathan Drake'
+    }()
+    ```

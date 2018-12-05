@@ -15,6 +15,7 @@
     * [NPM](/node_js/npm.md)
 * [SQL]
     * [PostgreSQL](/sql/postgresql.md)
+* [AWS](/aws/aws.md)
 * Other
     * [Git](/other/git.md)
     * [Docker](/other/docker.md)
