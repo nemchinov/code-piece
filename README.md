@@ -13,6 +13,7 @@
 * [Analytics](/analytics/terminology.md)
 * [NodeJS](/node_js/node_js_code.md)
     * [NPM](/node_js/npm.md)
+    * [Gulp](/node_js/gulp.md)
 * [SQL]
     * [PostgreSQL](/sql/postgresql.md)
 * [AWS](/aws/aws.md)
