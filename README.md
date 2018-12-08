@@ -6,6 +6,7 @@
         * [React](/javascript/frameworks/react.md)
     * [Examples](/javascript/javascript_code.md)
     * [Сheck yourself](/javascript/check.md)
+    * [TypeScript](/javascript/typescript.md)
 * [Style](/style_sheet/css.md)
     * [SCSS](/style_sheet/scss.md)
 * [Html](/html/html.md)
