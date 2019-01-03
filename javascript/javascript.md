@@ -281,6 +281,9 @@
     try { } catch (err) { } finally { }
     Promise.resolve(1).catch((err) => {});
     ```
+29. Фризинг объекта от добавления новых свойств `Object.seal(obj)` - `Object.isSealed()` - возможно изменение значений свойств
+    `Object.preventExtensions(obj)` - `Object.isExtensible()` - возможно удаление свойств
+    `Object.freeze(obj)` - `Object.isFrozen()` - предотвращает добавление новых свойств к объекту, удаление старых свойств из объекта и изменение существующих свойств или значения их атрибутов перечисляемости, настраиваемости и записываемости
 
 # Patterns
 1. Паттерн Ice Factory

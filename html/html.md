@@ -25,6 +25,19 @@
         <a href="../movies/avatar-theatrical-trailer.html" itemprop="trailer">Trailer</a>
     </div>
     ```
+1. Отслеживание через CSS пустоты input
+    ```html
+        <input type="text" name="input" id="input" required pattern="\S+"/>
+    ```
+    ```css
+    input:not(:placeholder-shown) {
+        border-color: hsl(0, 76%, 50%);
+    }
+    input:valid {
+        border-color: hsl(120, 76%, 50%);
+    }
+    ```
+
 # ARIA
  Технологический стандарт, разрабатываемый Консорциумом Всемирной паутины для предоставления возможности полноценного использования Интернета людьми с физическими ограничениями (нарушение работы органов зрения и опорно-двигательного аппарата). 
 

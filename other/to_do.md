@@ -39,3 +39,4 @@
 29. https://postgrespro.ru/docs/postgresql/11/queries-table-expressions
 31. angularJs 1.x
 33. typescript
+34. sketch 

@@ -1,3 +1,4 @@
+1. `tsc file.ts`
 1. Union
     ```javascript
     const isUnionType: boolean | string | number = true;
@@ -48,7 +49,7 @@
         public_address: IPublicAddress;
     }
     interface IResponse {
-        status: number;
+        readonly status: number;
     }
 
     interface ISlackResponse extends IResponse {
@@ -58,7 +59,7 @@
     interface ICache {
         size: number;
         first: ICacheItem;
-        last: ICacheitem;
+        last?: ICacheitem;
         items: {
             [item: string]: ICacheItem;
         };
@@ -78,6 +79,7 @@
 
     class FileCache implements IFileCache {
         store = new Map();
+        static PI: number = 3.14;
 
         set(key: string, value: ICacheItem): void {
             this.store.set(key, value);
@@ -87,4 +89,80 @@
             return this.store.get(key);
         }
     }
+
+    class User {
+        readonly id: number;
+        constructor(private name: string, private age: number) { }
+        
+        public displayInfo(): void {
+            console.log("name: " + this.name + "; age: " + this.age);
+        }
+    }
+
+    class Employee extends User {
+    
+        company: string;
+        work(name: string, age: number): void {
+            super(name, age);
+            console.log(this.name + " работает в компании " + this.company);
+        }
+    }
+
+    abstract class Figure {
+        getArea(): void{
+            console.log("Not Implemented")
+        }
+    }
+
+    ```
+1. Обобщения
+    ```javascript
+    function getId<T>(id: T): T {
+        
+        return id;
+    }
+    let result1 = getId<number>(5);
+    // class UserInfo<T extends User>
+    ```
+1. Пространства имен
+    ```javascript
+    namespace Personnel {
+        export class Employee {
+        
+            constructor(public name: string){
+            }
+        }
+        export namespace Clients {
+            export class VipClient {
+            
+                constructor(public name: string){
+                }
+            }
+        }
+    }
+    let alice = new Personnel.Employee("Alice");
+    ```
+1. Export `export {Device, Phone, Call as Devices};`
+1. Заголовочные файлы `.d.ts`
+    ```javascript
+    // globals.d.ts
+    declare var globalVar: string;
+    // app.ts
+    /// <reference path="globals.d.ts" />
+    class Utility {
+        static displayGlobalVar() {
+            console.log(globalVar);
+        }
+    }
+    ```
+1. Декораторы
+    ```javascript
+    function sealed(constructor: Function) {
+        console.log("sealed decorator");
+        Object.seal(constructor);
+        Object.seal(constructor.prototype);
+    }
+    
+    @sealed
+    class User ...
     ```
