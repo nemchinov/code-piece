@@ -56,6 +56,7 @@
     grid-area: x; /* значение из grid-template-areas */
     justify-self: center;
     align-self: right;
+    // display: subgrid; /* сделать вложенные элементы частью грид сетки */ пока не поддерживается
     ```
 1. Resize
     ```css
