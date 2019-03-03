@@ -10,3 +10,4 @@
 1. `npx pkg` - If the binary is already installed, it will be executed from node_modules/.bin, But if the binary is missing, it will be installed first.
 1. `npx -p node@8 npm run build`
 1. `npm help <command>`
+1. `npm ci`
