@@ -76,3 +76,32 @@
     ```css
     :focus:not(:focus-visible) { outline: none }
     ```xz
+1. Скрыть пустные строки в таблице `table { empty-cells: hide; }`
+1. Пользовательские свойства
+    ```css
+    :root {
+        --netologyBrandColor: #800080;
+    }
+
+    button {
+        --NETOLOGY-BRAND-COLOR: #800080;
+        --netology-brand-color: #27ae60;
+            
+        border: 2px solid var(--NETOLOGY-BRAND-COLOR);
+        color: var(--netology-brand-color);  
+    }
+
+    .element::before {
+        --color: rgba(0, 0, 0, 1);
+        --hex: #000000;
+        --value: 20px;
+        --number: 3;
+        --text: "Hey, what's up?";
+        --keyword: currentColor;
+    }
+
+    button {
+        border: 2px solid var(--netologyBrandColor, #800080);
+        color: var(--netologyBrandColor, #800080);
+    }
+    ```
