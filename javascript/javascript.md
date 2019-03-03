@@ -284,6 +284,86 @@
 29. Фризинг объекта от добавления новых свойств `Object.seal(obj)` - `Object.isSealed()` - возможно изменение значений свойств
     `Object.preventExtensions(obj)` - `Object.isExtensible()` - возможно удаление свойств
     `Object.freeze(obj)` - `Object.isFrozen()` - предотвращает добавление новых свойств к объекту, удаление старых свойств из объекта и изменение существующих свойств или значения их атрибутов перечисляемости, настраиваемости и записываемости
+30. Атрибуты свойств
+    * [[Value]]
+    * [[Get]]
+    * [[Set]]
+    * [[Writable]]
+    * [[Enumerable]]
+    * [[Configurable]]
+
+    `Object.getOwnPropertyDescriptor(obj, fieldName)`
+    `newObj = Object.defineProperty(objm fieldName, Descriptor)`
+    ```javascript
+    const obj = {};
+
+    // #1
+    Object.defineProperty(obj, 'id', {
+    value: 42
+    });
+
+    // #2
+    console.log(obj);
+    // => { }
+
+    // #3
+    console.log(obj.id);
+    // => 42
+
+    // #4
+    Object.defineProperty(obj, 'name', {
+    value: 'Arfat',
+    writable: false,
+    enumerable: true,
+    configurable: true
+    });
+
+    // #5
+    console.log(obj.name);
+    // => 'Arfat'
+
+    // #6
+    obj.name = 'Arfat Salman'
+
+    // #7
+    console.log(obj.name);
+    // => 'Arfat' 
+    // (а не 'Arfat Salman')
+
+    Object.defineProperty(obj, 'lastName', {
+    value: 'Salman',
+    enumerable: false,
+    });
+
+    console.log(Object.keys(obj));
+    // => [ 'name' ]
+
+    // #8
+    delete obj.id;
+
+    // #9
+    console.log(obj.id);
+    // => 42
+
+    //#10
+    Object.defineProperties(obj, {
+    property1: {
+        value: 42,
+        writable: true
+    },
+    property2: {}
+    });
+
+    console.log(obj.property1)
+    // => 42
+    ```
+31. Защита объекта от изменений
+    `Object.preventExtensions()` - создает не расширяемый объект (нельзя добавлять свойства)
+    `Object.isExtensible()`
+    `Object.seal()` - предотвращает добавление в объект новых свойств и удаление из него существующих в нём свойств
+    `Object.isSealed()`
+    `Object.freeze()` - заморозка объекта на изменение
+    `Object.isFrozen()`
 
 # Patterns
 1. Паттерн Ice Factory

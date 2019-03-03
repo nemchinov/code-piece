@@ -105,3 +105,44 @@
         color: var(--netologyBrandColor, #800080);
     }
     ```
+1. Применение css свойств в зависимости от языка (слабая поддержка)
+    ```
+    // margin
+    margin-block-start = margin-top
+    margin-block-end = margin-bottom
+    margin-inline-start = margin-left
+    margin-inline-end = margin-right
+    // padding
+    padding-block-start = padding-top
+    padding-block-end = padding-bottom
+    padding-inline-start = padding-left
+    padding-inline-end = padding-right
+    // border
+    border-block-start = border-top
+    border-block-end = border-bottom
+    border-inline-start = border-left
+    border-inline-end = border-right
+    // size
+    width = inline-size
+    height = block-size
+    // position
+    top = inset-block-start
+    bottom = inset-block-end
+    left = inset-inline-start
+    right = inset-inline-end
+    // float
+    float: left = float: inline-start
+    float: right = float: inline-end
+    //align
+    text-align: left = text-align: start
+    text-align: right = text-align: end
+    ```
+1. Ленивая загрузка css
+    ```html
+    <link rel="stylesheet" href="all.css" media="all" />
+    <link rel="stylesheet" href="small.css" media="(min-width: 20em)" />
+    <link rel="stylesheet" href="medium.css" media="(min-width: 64em)" />
+    <link rel="stylesheet" href="large.css" media="(min-width: 90em)" />
+    <link rel="stylesheet" href="extra-large.css" media="(min-width: 120em)" />
+    <link rel="stylesheet" href="print.css" media="print" />
+    ```
